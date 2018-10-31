@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.2/workbox-sw.js");
 
 importScripts(
-  "/simpleReact/precache-manifest.cf9d2d08c3db7d8b7aca7cd2a904a2f7.js"
+  "/simpleREACT/precache-manifest.c05d4b6715b48ed1384732e396aa99d0.js"
 );
 
 workbox.clientsClaim();
@@ -28,7 +28,7 @@ self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerNavigationRoute("/simpleReact/index.html", {
+workbox.routing.registerNavigationRoute("/simpleREACT/index.html", {
   
   blacklist: [/^\/_/,/\/[^\/]+\.[^\/]+$/],
 });
