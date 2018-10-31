@@ -14,20 +14,15 @@ var twenty15 = ["First solo exhibition", "National Merit Scholar"];
 
 var history = [twenty18, twenty17, twenty16, twenty15];
 var portraitHistory = [img18, img17, img16, img15];
-function Square (props) {
-    return (
-      <button className = "square" onClick = {props.onClick}
-      >
-        {props.value}
-      </button>
-    );
-}
+
 class Timeline extends React.Component {
   constructor(props){
     super(props);
+    var howManyYears = history.length;
     this.state = {
       history: history,
       portrait: portraitHistory,
+      years: Array(howManyYears).fill(null)
     };
   }
   handleYear(i){
@@ -37,7 +32,7 @@ class Timeline extends React.Component {
   }
   renderYear(i){
     var current = false;
-    if(i == 0){
+    if(i === 0){
       current = true;
     }
     return (
@@ -50,18 +45,17 @@ class Timeline extends React.Component {
     );
   }
   render() {
-    var years = []
     for(var i=0; i < this.state.history.length; i++)
     {
       var year = this.renderYear(i);
-      years.push(year);
+      this.state.years.push(year);
     }
     return (
       <div>
           <div className="site-tagline">
             <h1>Timeline</h1>
           </div>
-          {years}
+          {this.state.years}
 
       </div>
     );
@@ -78,6 +72,20 @@ class Year extends React.Component {
       events: props.events
     };
   }
+  activate(){
+    var toggle = !this.state.active;
+    this.setState({active: toggle});
+  }
+  deactivate(){
+    this.setState({active: false});
+  }
+  renderEvents(i){
+    const whatwhat = this.state.events[i];
+    return (
+      <Event 
+        what = {whatwhat} />
+    );
+  }
   render(){
     const theYear = this.state.year;
     const thePortrait = this.state.img;
@@ -90,30 +98,36 @@ class Year extends React.Component {
     var events = []
     for(var i=0; i < this.state.events.length; i++)
     {
-      var event = <anEvent what = {this.state.events[i]}/>;
+      var event = this.renderEvents(i);
       events.push(event);
     }
 
     return (
       <div>
-        <h1 className = {theYearClass}>{theYear}</h1>
-        <img className = {thePortraitClass} src={thePortrait}></img>
+        <div className = {theYearClass} onMouseEnter = {() => this.activate()}
+            onMouseLeave = {() => this.activate()}>
+        <h1 className = "annualYear">{theYear}</h1>
+          <div className = "eventList">{events}</div>
+        </div>
+        <img className = {thePortraitClass} src={thePortrait} alt="portrait"></img>
+
       </div>
     );
   }
 
 }
-class anEvent extends React.Component {
+class Event extends React.Component {
   constructor(props){
     super(props);
     this.state = {
       what: props.what,
     };
+    console.log(this.state.what);
   }
   render(){
-    const whatwhat = this.state.what;
+    var whatwhat = this.state.what;
     return (
-      <div>
+      <div className = "event">
         <p>{whatwhat}</p>
       </div>
     );
@@ -127,16 +141,16 @@ class AboutMe extends React.Component {
       <div className="site-container">
         <header id="header" className="header-transparent">        
           <div className="header-inner clearfix">
-            <div id="logo" className="left-float"><a className="logotype" href="">LU/MAR</a></div>
+            <div id="logo" className="left-float"><a className="logotype" href="http://marisa.lu/">LU/MAR</a></div>
             <div id="menu" className="right-float clearfix">
-              <a href="#" className="open-nav"><span className="hamburger"></span></a>   
+              <a href="http://marisa.lu/" className="open-nav"><span className="hamburger"></span></a>   
               <nav id="main-nav">
                 <ul>
-                  <li><a href="">Design</a></li>
-                  <li><a href="">Computation</a></li>
-                  <li><a href="#">Art</a></li>
-                  <li className="current-menu-item"><a href="">Me</a></li>
-                  <li><a href="../LuMarisaResume.pdf" target="_blank">Resume</a></li>
+                  <li><a href="http://marisa.lu/">Design</a></li>
+                  <li><a href="http://marisa.lu/">Computation</a></li>
+                  <li><a href="http://marisa.lu/">Art</a></li>
+                  <li className="current-menu-item"><a href="http://marisa.lu/">Me</a></li>
+                  <li><a href="http://marisa.lu/">Resume</a></li>
                 </ul>
               </nav>
             </div>     

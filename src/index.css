@@ -93,6 +93,12 @@ h6 {
   left: 40vw;
   top: 30vh;
   opacity:0.6;
+  vertical-align:top;
+}
+.annualYear {
+  display: inline-block;
+  top:0px;
+  vertical-align:top;
 }
 .annualPortrait {
   position:fixed;
@@ -106,6 +112,15 @@ h6 {
 }
 .annual.active {
   opacity:1;
+}
+.eventList {
+  display: inline-block;
+  vertical-align:top;
+  position:relative;
+  padding: 10px 20px 20px 30px;
+}
+.event {
+  position:relative;
 }
 
 /*==============PAGE LOADER START===================*/
