@@ -1,17 +1,17 @@
 {
   "main.css": "/simpleREACT/static/css/main.cdc11551.chunk.css",
-  "main.js": "/simpleREACT/static/js/main.dab83138.chunk.js",
-  "main.js.map": "/simpleREACT/static/js/main.dab83138.chunk.js.map",
+  "main.js": "/simpleREACT/static/js/main.fef640a8.chunk.js",
+  "main.js.map": "/simpleREACT/static/js/main.fef640a8.chunk.js.map",
   "static/js/1.1cd938f0.chunk.js": "/simpleREACT/static/js/1.1cd938f0.chunk.js",
   "static/js/1.1cd938f0.chunk.js.map": "/simpleREACT/static/js/1.1cd938f0.chunk.js.map",
   "runtime~main.js": "/simpleREACT/static/js/runtime~main.3994ca96.js",
   "runtime~main.js.map": "/simpleREACT/static/js/runtime~main.3994ca96.js.map",
   "static/media/2018.png": "/simpleREACT/static/media/2018.67cab17e.png",
   "static/media/2016.png": "/simpleREACT/static/media/2016.f2c4d0a7.png",
-  "static/media/2015.png": "/simpleREACT/static/media/2015.f2c4d0a7.png",
-  "static/media/2017.png": "/simpleREACT/static/media/2017.371ed948.png",
+  "static/media/2015.png": "/simpleREACT/static/media/2015.cd2587a6.png",
+  "static/media/2017.png": "/simpleREACT/static/media/2017.8132aa1d.png",
   "static/css/main.cdc11551.chunk.css.map": "/simpleREACT/static/css/main.cdc11551.chunk.css.map",
   "index.html": "/simpleREACT/index.html",
-  "precache-manifest.c05d4b6715b48ed1384732e396aa99d0.js": "/simpleREACT/precache-manifest.c05d4b6715b48ed1384732e396aa99d0.js",
+  "precache-manifest.2dca3587a2025ace5a50b27f94dc87ec.js": "/simpleREACT/precache-manifest.2dca3587a2025ace5a50b27f94dc87ec.js",
   "service-worker.js": "/simpleREACT/service-worker.js"
 }
